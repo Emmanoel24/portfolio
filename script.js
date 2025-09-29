@@ -130,7 +130,7 @@ document.querySelectorAll('.tilt').forEach(card=>{
   card.addEventListener('mouseleave', leave);
 });
 
-/* ===== Smooth scroll for same-page links ===== */
+
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click', e=>{
     const id = a.getAttribute('href');
@@ -156,30 +156,8 @@ form?.addEventListener('submit', async (e)=>{
     return;
   }
 
-  // 🔒 Default: client-only success (no backend)
+
   status.textContent = "✅ Message sent! I’ll reply shortly.";
   status.style.color = "#17c964";
   form.reset();
-
-  /* ✅ To send real emails with EmailJS:
-  1) Uncomment the <script> tag in index.html
-  2) emailjs.init("YOUR_PUBLIC_KEY");
-  3) Replace SERVICE_ID and TEMPLATE_ID below
-  */
-  /*
-  try {
-    emailjs.init("YOUR_PUBLIC_KEY");
-    await emailjs.send("SERVICE_ID","TEMPLATE_ID",{
-      from_name: name,
-      from_email: email,
-      message: message
-    });
-    status.textContent = "✅ Message sent! I’ll reply shortly.";
-    status.style.color = "#17c964";
-    form.reset();
-  } catch(err){
-    status.textContent = "❌ Could not send. Please try again later.";
-    status.style.color = "#ff6b6b";
-  }
-  */
 });
