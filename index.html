@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Emma.Dev — Frontend Developer</title>
+  <meta name="description" content="Portfolio of Emma.Dev — Frontend developer building modern, accessible interfaces." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap (utility classes only) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon (navy green diamond) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230b2a2a'/%3E%3Ctext y='.8em' x='.12em' font-size='80' fill='%2332d399'%3E%E2%97%86%3C/text%3E%3C/svg%3E">
+</head>
+
+<body>
+  <!-- Sidebar (mobile) -->
+  <aside id="sidebar" class="sidebar" aria-hidden="true">
+    <button class="close" aria-label="Close menu" id="closeSidebar">×</button>
+    <nav class="side-links" aria-label="Mobile">
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="resume/Emma-Dev-Resume.pdf" download class="btn-ghost">Download Résumé</a>
+    </nav>
+  </aside>
+  <div id="scrim" class="scrim" aria-hidden="true"></div>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="wrap">
+      <a href="#home" class="brand">Emma<span>.Dev</span></a>
+      <nav class="links" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="resume/Emma-Dev-Resume.pdf" download class="btn-ghost d-none d-md-inline-flex">Download Résumé</a>
+      </nav>
+      <div class="topbar-actions">
+        <button id="toggleTheme" class="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+        <button id="openSidebar" class="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <div class="wrap hero-inner">
+      <p class="badge">Frontend Developer • Lagos, Nigeria</p>
+      <h1 class="headline">
+        I merge <span class="stroke">design</span>, <span class="glow">logic</span> & interaction into unforgettable experiences.
+      </h1>
+      <h2 class="typewriter" aria-live="polite"></h2>
+      <p class="lede">HTML • CSS • Bootstrap • JavaScript. I craft fast, accessible UIs with beautiful details.</p>
+      <div class="cta">
+        <a href="#projects" class="btn">View Work</a>
+        <a href="mailto:Reachemmanuel.id@gmail.com" class="btn-ghost">Email Me</a>
+      </div>
+      <ul class="meta">
+        <li><a href="mailto:Reachemmanuel.id@gmail.com">Reachemmanuel.id@gmail.com</a></li>
+        <li><a href="https://github.com/Emmanoel24" target="_blank">github.com/Emmanoel24</a></li>
+        <li><a href="https://www.linkedin.com/in/moyinoluwa-idowu-382074241" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects-section">
+    <div class="wrap">
+      <div class="section-head text-center">
+        <h2 class="section-title">🚀 Featured Projects</h2>
+        <p class="section-subtitle">Real-world projects with clean UI, great UX, and production thinking.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Road / AI Object Detection -->
+        <article class="project-card reveal tilt" tabindex="0">
+          <div class="project-image">
+            <!-- image (road + AI) -->
+            <img src="./image/detection.jpeg" alt="Pothole Detection preview image" />
+            <span class="shine"></span>
+          </div>
+          <div class="project-content">
+            <h3>RoadVision — Pothole Detection</h3>
+            <p>YOLOv8 + Flask web app. Upload a road image → detect potholes with overlay. Optional voice alert for safety.</p>
+            <ul class="tech-stack"><li>HTML</li><li>CSS</li><li>Bootstrap</li><li>JavaScript</li><li>Flask</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/Emmanoel24/potholes-recognition" class="btn" target="_blank" rel="noopener">View Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Healthcare / Analytics -->
+        <article class="project-card reveal tilt" tabindex="0">
+          <div class="project-image">
+            <!-- Auto-load relevant image (healthcare + AI) -->
+            <img src="./image/health.webp" alt="Diabetes Risk Predictor preview image" />
+            <span class="shine"></span>
+          </div>
+          <div class="project-content">
+            <h3>Diabetes Risk Predictor</h3>
+            <p>ML-driven risk estimation from patient metrics. Clean form, accessible design, and clear feedback states.</p>
+            <ul class="tech-stack"><li>HTML</li><li>CSS</li><li>Bootstrap</li><li>JavaScript</li><li>Flask</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/Emmanoel24/diabetes-prediction-webapp" class="btn" target="_blank" rel="noopener">View Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="wrap">
+      <h2 class="section-title text-center">Skills</h2>
+      <ul class="chips reveal">
+        <li>HTML5</li><li>CSS3</li><li>Bootstrap</li><li>JavaScript (ES6+)</li>
+        <li>Responsive Design</li><li>REST APIs</li><li>Git/GitHub</li>
+        <li>Accessibility (a11y)</li><li>Flask Integration</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <h2 class="section-title text-center">About</h2>
+      <div class="about">
+        <p class="reveal">
+          I’m <strong>Emma.Dev</strong>, a frontend developer who loves turning complex ideas into calm, modern UIs.
+          I obsess over small details, performance, and accessibility—so your product feels fast, clear, and delightful.
+        </p>
+        <div class="info reveal">
+          <div><strong>Location:</strong> Lagos, Nigeria</div>
+          <div><strong>Email:</strong> <a href="mailto:Reachemmanuel.id@gmail.com">Reachemmanuel.id@gmail.com</a></div>
+          <div><strong>LinkedIn:</strong> <a target="_blank" href="https://www.linkedin.com/in/moyinoluwa-idowu-382074241">/moyinoluwa-idowu</a></div>
+          <div><strong>GitHub:</strong> <a target="_blank" href="https://github.com/Emmanoel24">@Emmanoel24</a></div>
+          <a class="btn-ghost mt-2" href="resume/Emma-Dev-Resume.pdf" download>Download Résumé</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <h2 class="section-title text-center">Contact</h2>
+      <form id="contactForm" class="form reveal" autocomplete="off" novalidate>
+        <div class="grid2">
+          <label>Name <input required id="name" name="name" placeholder="Your name" /></label>
+          <label>Email <input required type="email" id="email" name="email" placeholder="you@example.com" /></label>
+        </div>
+        <label>Message <textarea required id="message" name="message" rows="5" placeholder="What would you like to build?"></textarea></label>
+        <button class="btn" type="submit">Send Message</button>
+        <p id="formStatus" class="muted mt-2" role="status" aria-live="polite"></p>
+      </form>
+      <p class="muted small mt-2 text-center">Prefer email? <a href="mailto:Reachemmanuel.id@gmail.com">Reachemmanuel.id@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap between">
+      <span>© <span id="year"></span> Emma.Dev</span>
+      <span class="muted">Built with HTML • CSS • Bootstrap • JS</span>
+    </div>
+  </footer>
+
+  <!-- EmailJS (optional live email) -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script> -->
+
+  <script src="script.js"></script>
+</body>
+</html>
